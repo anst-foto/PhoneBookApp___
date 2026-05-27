@@ -1,4 +1,10 @@
 <Solution>
+  <Folder Name="/editorconfig/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Folder Name="/editorconfig/base/">
+    <File Path="../.editorconfig" />
+  </Folder>
   <Folder Name="/git/">
     <File Path="../.gitattributes" />
     <File Path=".gitignore" />
