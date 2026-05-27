@@ -1,0 +1,7 @@
+# dotenv files
+.env
+
+
+# JetBrains Rider
+*.sln.iml
+.idea/
