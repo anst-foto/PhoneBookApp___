@@ -1,0 +1,18 @@
+@baseUrl = http://localhost:5202
+
+GET {{baseUrl}}/
+
+###
+
+GET {{baseUrl}}/persons
+Accept: application/json
+
+###
+
+POST {{baseUrl}}/persons
+Content-Type: application/json
+
+{
+    "LastName": "Starinin",
+    "FirstName": "Andrey"
+}

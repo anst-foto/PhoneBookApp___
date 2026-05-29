@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/back/">
+    <Project Path="PhoneBookApp.Model/PhoneBookApp.Model.csproj" />
+    <Project Path="PhoneBookApp.WebApi/PhoneBookApp.WebApi.csproj" />
+  </Folder>
   <Folder Name="/docker/">
     <File Path="../.env.example" />
     <File Path="../docker-compose.yml" />

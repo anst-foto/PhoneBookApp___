@@ -36,6 +36,23 @@ services:
     networks:
       - phonebook_network
 
+  backend:
+    container_name: backend_container
+    build:
+      context: ./back
+      dockerfile: PhoneBookApp.WebApi/Dockerfile
+    environment:
+      DB_CONNECTION_STRING: ${DB_CONNECTION_STRING}
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - phonebook_network
+
 networks:
   phonebook_network:
     driver: bridge
