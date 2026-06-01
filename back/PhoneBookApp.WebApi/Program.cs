@@ -34,4 +34,6 @@ app.MapPost("/persons", async ([FromBody] Person person) =>
         : Results.BadRequest();
 });
 
+//TODO: добавить метод для удаления
+
 await app.RunAsync();
