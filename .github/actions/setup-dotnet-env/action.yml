@@ -12,7 +12,7 @@ inputs:
   solution-path:
     description: 'Path to solution file'
     required: false
-    default: 'back/ExamPaper.slnx'
+    default: 'back/PhoneBookApp.slnx'
 
 runs:
   using: 'composite'
