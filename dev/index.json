@@ -1,0 +1,37 @@
+{
+  "api/PhoneBookApp.Model.DbContext.html": {
+    "href": "api/PhoneBookApp.Model.DbContext.html",
+    "title": "Class DbContext | Телефонная книга",
+    "summary": "Class DbContext Namespace PhoneBookApp.Model Assembly PhoneBookApp.Model.dll Представляет контекст базы данных для работы с телефонной книгой. Использует Dapper и Npgsql для доступа к PostgreSQL. public class DbContext Inheritance object DbContext Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors DbContext(string) Инициализирует новый экземпляр класса DbContext. public DbContext(string connectionString) Parameters connectionString string Строка подключения к базе данных PostgreSQL. Exceptions ArgumentNullException Выбрасывается, если строка подключения пуста или состоит из пробелов. Methods AddPerson(Person) Асинхронно добавляет новый контакт в таблицу table_persons. public Task<bool> AddPerson(Person person) Parameters person Person Данные контакта (фамилия и имя). Returns Task<bool> Задача, результат которой — true, если запись успешно добавлена; иначе false. GetPersons() Асинхронно получает список всех контактов из таблицы table_persons. public Task<IEnumerable<Person>> GetPersons() Returns Task<IEnumerable<Person>> Задача, результат которой содержит коллекцию объектов Person."
+  },
+  "api/PhoneBookApp.Model.Person.html": {
+    "href": "api/PhoneBookApp.Model.Person.html",
+    "title": "Class Person | Телефонная книга",
+    "summary": "Class Person Namespace PhoneBookApp.Model Assembly PhoneBookApp.Model.dll Класс для хранения информации о человеке в базе данных public class Person Inheritance object Person Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties FirstName Имя человка public required string FirstName { get; set; } Property Value string Id Идентификатор записи в БД public int Id { get; set; } Property Value int IsDeleted Признак удаленной персоны из базы public bool IsDeleted { get; set; } Property Value bool LastName Фамилия человека public required string LastName { get; set; } Property Value string"
+  },
+  "api/PhoneBookApp.Model.Phone.html": {
+    "href": "api/PhoneBookApp.Model.Phone.html",
+    "title": "Class Phone | Телефонная книга",
+    "summary": "Class Phone Namespace PhoneBookApp.Model Assembly PhoneBookApp.Model.dll Класс для хранения номера телефона в базе данных public class Phone Inheritance object Phone Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Id Идентификатор записи в БД public int Id { get; set; } Property Value int Number Номер телефона public required string Number { get; set; } Property Value string PersonId Ссылка на запись о человеке, которому принадлежит номер public int PersonId { get; set; } Property Value int"
+  },
+  "api/PhoneBookApp.Model.html": {
+    "href": "api/PhoneBookApp.Model.html",
+    "title": "Namespace PhoneBookApp.Model | Телефонная книга",
+    "summary": "Namespace PhoneBookApp.Model Classes DbContext Представляет контекст базы данных для работы с телефонной книгой. Использует Dapper и Npgsql для доступа к PostgreSQL. Person Класс для хранения информации о человеке в базе данных Phone Класс для хранения номера телефона в базе данных"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | Телефонная книга",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | Телефонная книга",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | Телефонная книга",
+    "summary": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

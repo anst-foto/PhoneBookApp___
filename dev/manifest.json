@@ -1,0 +1,144 @@
+{
+  "source_base_path": "/home/runner/work/PhoneBookApp___/PhoneBookApp___/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhoneBookApp.Model.DbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhoneBookApp.Model.DbContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhoneBookApp.Model.DbContext",
+      "Summary": "<p sourcefile=\"api/PhoneBookApp.Model.DbContext.yml\" sourcestartlinenumber=\"1\">Представляет контекст базы данных для работы с телефонной книгой.\nИспользует Dapper и Npgsql для доступа к PostgreSQL.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhoneBookApp.Model.Person.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhoneBookApp.Model.Person.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhoneBookApp.Model.Person",
+      "Summary": "<p sourcefile=\"api/PhoneBookApp.Model.Person.yml\" sourcestartlinenumber=\"1\">Класс для хранения информации о человеке в базе данных</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhoneBookApp.Model.Phone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhoneBookApp.Model.Phone.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhoneBookApp.Model.Phone",
+      "Summary": "<p sourcefile=\"api/PhoneBookApp.Model.Phone.yml\" sourcestartlinenumber=\"1\">Класс для хранения номера телефона в базе данных</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhoneBookApp.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhoneBookApp.Model.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhoneBookApp.Model",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "docs/toc.json"
+        },
+        ".html": {
+          "relative_path": "docs/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
