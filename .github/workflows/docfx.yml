@@ -18,26 +18,34 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    concurrency:
+      group: docs-${{ github.ref }}
+      cancel-in-progress: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        
-      - name: Dotnet Setup
-        uses: actions/setup-dotnet@v5
+        uses: actions/checkout@v6
         with:
-          dotnet-version: 10.x
-
-      - name: Install DocFx
+          fetch-depth: 0
+      - name: Setup .NET
+        uses: ./.github/actions/setup-dotnet-env
+        with:
+          restore: 'false'
+      - name: Cache DocFX tool
+        uses: actions/cache@v5
+        with:
+          path: ~/.dotnet/tools
+          key: ${{ runner.os }}-docfx-${{ hashFiles('**/docfx.json') }}
+          restore-keys: ${{ runner.os }}-docfx-
+      - name: Install DocFX
         run: dotnet tool update -g docfx
-        
-      - name: Build documentation
+               
+      - name: Build Docs
         run: docfx docfx/docfx.json
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: 'docfx/_site'
-          
+               
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docfx/_site
+          destination_dir: ${{ github.ref == 'refs/heads/develop' && 'dev' || '' }}
+          keep_files: true
