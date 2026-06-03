@@ -30,6 +30,7 @@
     <File Path=".gitignore" />
   </Folder>
   <Folder Name="/github/">
+    <File Path="../.github/actions/setup-dotnet-env/action.yml" />
     <File Path="../.github/workflows/docfx.yml" />
   </Folder>
 </Solution>
