@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 
 using PhoneBookApp.Model;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("Default") 
@@ -16,9 +18,21 @@ var db = new DbContext(connectionString);
 
 builder.Services.AddOpenApi();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(MyAllowSpecificOrigins,
+                          policy =>
+                          {
+                              policy.AllowAnyOrigin()
+                                                  .AllowAnyHeader()
+                                                  .AllowAnyMethod();
+                          });
+});
+
 var app = builder.Build();
 app.MapOpenApi();
 app.UseHttpsRedirection();
+app.UseCors(MyAllowSpecificOrigins);
 
 app.MapGet("/", () => Results.BadRequest());
 app.MapGet("/persons", async () =>

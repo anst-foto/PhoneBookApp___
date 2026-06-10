@@ -42,7 +42,7 @@ services:
       context: ./back
       dockerfile: PhoneBookApp.WebApi/Dockerfile
     environment:
-      DB_CONNECTION_STRING: ${DB_CONNECTION_STRING}
+      ConnectionStrings__Default: ${DB_CONNECTION_STRING}
     ports:
       - "8080:8080"
       - "8081:8081"
